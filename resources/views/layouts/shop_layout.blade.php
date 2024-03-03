@@ -67,7 +67,7 @@
                     <div class="row">
                         <div class="col-xl-3 col-lg-2 col-md-3 col-sm-5">
                             <div class="header-logo_area">
-                                <a href="/">
+                                <a href="{{url('/')}}">
                                     <img src="{{ asset('assets/images/menu/logo/1.png') }}" alt="Logo">
                                 </a>
                             </div>
@@ -167,7 +167,7 @@
                             <div class="main-menu_area position-relative">
                                 <nav class="main-nav">
                                     <ul>
-                                        <li><a href="/">Home</a></li>
+                                        <li><a href="{{url('/')}}">Home</a></li>
                                         <li><a href="{{ URL::to('products') }}">Products</li>
                                         {{-- <li class=""><a href="{{ URL::to('about') }}">About Us</a></li> --}}
                                         <li class=""><a href="{{ URL::to('contact') }}">Contact</a></li>
@@ -222,7 +222,7 @@
                             <div class="main-menu_area position-relative">
                                 <nav class="main-nav">
                                     <ul>
-                                        <li><a href="/">Home</a></li>
+                                        <li><a href="{{url('/')}}">Home</a></li>
                                         <li><a href="{{ URL::to('products') }}">Products</li>
                                         {{-- <li class=""><a href="about-us.html">About Us</a></li> --}}
                                         <li class=""><a href="{{ URL::to('contact') }}">Contact</a></li>
@@ -235,7 +235,7 @@
                         </div>
                         <div class="col-sm-3 d-block d-lg-none">
                             <div class="header-logo_area header-sticky_logo">
-                                <a href="/">
+                                <a href="{{url('/')}}">
                                     <img src="{{ asset('assets/images/menu/logo/1.png') }}" alt="Logo">
                                 </a>
                             </div>
@@ -321,7 +321,7 @@
                         </div>
                         <nav class="offcanvas-navigation">
                             <ul class="mobile-menu">
-                                <li><a href="/"><span
+                                <li><a href="{{url('/')}}"><span
                                         class="mm-text">Home</span></a>
                                 </li>
                                 <li>
@@ -342,7 +342,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="login-register.html">
+                                            <a href="{{ URL::to('login') }}">
                                                 <span class="mm-text">Login | Register</span>
                                             </a>
                                         </li>

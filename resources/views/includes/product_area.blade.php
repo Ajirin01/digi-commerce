@@ -30,7 +30,7 @@
                     <div class="inner-slide">
                         <div class="single-product">
                             <div class="product-img">
-                                <a href="/product/{{$product->id}}">
+                                <a href="{{url('product')}}/{{$product->id}}">
                                     <img class="primary-img" src="{{optional(json_decode($product->photos))[0]}}" alt="Product Image">
                                     <img class="secondary-img" src="{{optional(json_decode($product->photos))[1]}}" alt="Product Image">
                                 </a>
@@ -56,7 +56,7 @@
                                 
                                 <div class="add-actions">
                                     <ul>
-                                        <li><a class="uren-add_cart" href="/product/{{$product->id}}" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i
+                                        <li><a class="uren-add_cart" href="{{url('product')}}/{{$product->id}}" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i
                                             class="ion-bag"></i></a>
                                         </li>
                                         @auth
@@ -76,7 +76,7 @@
                                     <div class="rating-box">
                                         @include('includes.rating')
                                     </div>
-                                    <h6><a class="product-name" href="/product/{{$product->id}}">{{$product->name}}</a></h6>
+                                    <h6><a class="product-name" href="{{url('product')}}/{{$product->id}}">{{$product->name}}</a></h6>
                                     <div class="price-box">
                                         <span class="new-price">&#x20A6;{{$product->price}}</span>
                                     </div>
@@ -109,7 +109,7 @@
                             </div>
                             <div class="add-actions">
                                 <ul>
-                                    <li><a class="uren-add_cart" href="/product/{{$product->id}}" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="ion-bag"></i></a>
+                                    <li><a class="uren-add_cart" href="{{url('product')}}/{{$product->id}}" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="ion-bag"></i></a>
                                     </li>
                                     @auth
                                         <li><a class="uren-wishlist" href="wishlist" data-toggle="tooltip" data-placement="top" title="Add To Wishlist" ng-click="addToWishList({{$product}})"><i

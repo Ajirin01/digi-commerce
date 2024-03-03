@@ -51,7 +51,7 @@
                             @csrf
                             <select name="status" id="" class="form-control">
                               <option value="pending">pending</option>
-                              <option value="confrimed">confrimed</option>
+                              <option value="confirmed">confirmed</option>
                               <option value="shipped">shipped</option>
                               <option value="completed">completed</option>
                               <option value="canceled">canceled</option>

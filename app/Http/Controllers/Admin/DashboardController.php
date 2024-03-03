@@ -10,6 +10,9 @@ use App\Models\Product;
 use App\Models\Order;
 use App\Models\Sale;
 use App\Models\Cart;
+use App\Models\Seller;
+use App\Models\Earning;
+
 use Carbon\Carbon;
 use Session;
 
@@ -33,7 +36,11 @@ class DashboardController extends Controller
         // $sales = Sale::all();
         $carts = Cart::all();
         $users = User::where('role', 'user')->get();
-        $sellers = User::where('role', 'seller')->get();
+        $sellers = Seller::all();
+
+        $pending_earnings = Earning::where('seller_id', Auth::user()->seller->id)->where('paid', false)->sum('amount');
+        $paid_earnings = Earning::where('seller_id', Auth::user()->seller->id)->where('paid', true)->sum('amount');
+
         
         // sales by role
         $sales = Order::where('status', 'completed')->get();
@@ -102,6 +109,8 @@ class DashboardController extends Controller
                     'sales_total'=> $dis,
                     'sale_recap'=> $sale_recap,
                     'sales_seller'=> $sales_seller,
+                    'pending_earnings'=> $pending_earnings,
+                    'paid_earnings'=> $paid_earnings,
                     // 'sales_wholesale'=> $sales_wholesale,
                     // 'sales_total_retail'=> $dis_retail,
                     // 'sales_total_wholesale'=> $dis_wholesale

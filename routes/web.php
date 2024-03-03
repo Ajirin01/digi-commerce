@@ -50,6 +50,9 @@ Route::post('shop/products/search', [App\Http\Controllers\ShopController::class,
 Route::get('checkout', [App\Http\Controllers\CheckoutController::class, 'checkout']);
 Route::post('place-order', [App\Http\Controllers\CheckoutController::class, 'placeOrder']);
 Route::get('order-confirm', [App\Http\Controllers\CheckoutController::class, 'orderConfirm'])->name('order.confirm');
+Route::get('payment-callback', [App\Http\Controllers\CheckoutController::class, 'paymentCallback'])->name('payment.callback');
+
+
 
 
 // account routes
@@ -103,3 +106,6 @@ Route::prefix('admin')->group(function () {
         return redirect()->route('admin-login');
     })->name('admin-logout');
 }); 
+
+//withdrawal routes
+Route::post('verify-bank-details', [App\Http\Controllers\WithdrawalController::class, 'verifyAccount']);

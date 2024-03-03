@@ -93,7 +93,7 @@ class AccountController extends Controller
 
     public function becomeSeller()
     {
-        $banks = file_get_contents(public_path('banks.json'));
+        $banks = file_get_contents('banks.json');
         // return response()->json($banks);
         return view('shop.myAccount.become_seller', ['banks'=> json_decode($banks)]);
     }
