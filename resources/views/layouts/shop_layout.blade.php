@@ -107,7 +107,7 @@
                                         </a>
                                     </li>
                                     <li class="contact-us_wrap">
-                                        <a href="tel://+234 703 699 8003"><i class="ion-android-call"></i>+234 703 699 8003</a>
+                                        <a href="tel://+234 817 174 9191"><i class="ion-android-call"></i>+234 817 174 9191</a>
                                     </li>
                                 </ul>
                             </div>
@@ -135,18 +135,18 @@
                                                 @else
                                                 <li>
                                                 @endif
-                                                    <a href="/category/{{$category->id}}/products?{{$category->name}}">{{ $category->name }}</a>
+                                                    <a href="{{ URL::to('/category/'. $category->id. '/products?'. $category->name) }}">{{ $category->name }}</a>
                                                     @if($category->children->count() > 0)
                                                         <ul class="cat-mega-menu">
                                                             @foreach($category->children as $child)
                                                                 <li class="right-menu cat-mega-title">
                                                                     {{-- "/category/{{$category->id}}/products?{{$category->name}}" --}}
                                                                     {{-- <a href="{{ url('category/'.$child->id) }}">{{ $child->name }}</a> --}}
-                                                                    <a href="/category/{{$child->id}}/products?{{$child->name}}">{{ $child->name }}</a>
+                                                                    <a href="{{ URL::to('/category/'. $child->id. '/products?'. $child->name) }}">{{ $child->name }}</a>
                                                                     @if($child->children->count() > 0)
                                                                         <ul>
                                                                             @foreach($child->children as $subChild)
-                                                                                <li><a href="/category/{{$subChild->id}}/products?{{$subChild->name}}">{{ $subChild->name }}</a></li>
+                                                                                <li><a href="{{ URL::to('/category/'. $subChild->id. '/products?'. $subChild->name) }}">{{ $subChild->name }}</a></li>
                                                                                 {{-- <li><a href="{{ url('category/'.$subChild->id) }}">{{ $subChild->name }}</a></li> --}}
                                                                             @endforeach
                                                                         </ul>
@@ -261,7 +261,7 @@
                                         </a>
                                     </li>
                                     <li class="contact-us_wrap">
-                                        <a href="tel://+234 703 699 8003"><i class="ion-android-call"></i>+234 703 699 8003</a>
+                                        <a href="tel://+234 817 174 9191"><i class="ion-android-call"></i>+234 817 174 9191</a>
                                     </li>
                                 </ul>
                             </div>

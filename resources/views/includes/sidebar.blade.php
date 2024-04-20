@@ -67,7 +67,7 @@
                 @foreach ($brands as $brand)
                     <li>
                         @if ($brand->products->count() > 0)
-                            <a href="/brand/{{$brand->id}}/products?{{$brand->name}}">{{$brand->name}} <span>({{$brand->products->count()}})</span></a>
+                            <a href="{{ URL::to('/brand/'. $brand->id. '/products?'. $brand->name) }}">{{$brand->name}} <span>({{$brand->products->count()}})</span></a>
                         @endif
                     </li>
                 @endforeach
