@@ -63,7 +63,7 @@ class ProductController extends Controller
 
         // return response()->json($categoryProducts);
 
-        $shop = Shop::find($shopId)->name;
+        $shop = Shop::find($shopId);
         // return response()->json($brandProducts);
 
         return view('shop.products_by_shop', ['shop'=> $shop, 'products'=> $shopProducts]);

@@ -28,7 +28,7 @@
                             
                             @if (Auth::user()->seller != null && Auth::user()->seller->shop)
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/shop/{{Auth::user()->seller->shop->id}}/products"  aria-controls="account-details">My Shop</a>
+                                    <a class="nav-link" href="{{ URL::to('shop/'.Auth::user()->seller->shop->id.'/products') }}"  aria-controls="account-details">My Shop({{Auth::user()->seller->shop->status}})</a>
                                 </li>
                             @endif
 

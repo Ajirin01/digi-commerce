@@ -22,7 +22,7 @@
                     <li>
                         @foreach ($categories as $category)
                             @if ($category->products->count() > 0)
-                                <a href="/category/{{$category->id}}/products?{{$category->name}}">{{$category->name}} <span>({{$category->products->count()}})</span></a>
+                                <a href="{{ URL::to('/category/'. $category->id. '/products?'.$category->name) }}">{{$category->name}} <span>({{$category->products->count()}})</span></a>
                             @endif
                         @endforeach
                         <a class="active" href="javascript:void(0)">Shop <span>({{$shops->count()}})</span></a>
@@ -30,7 +30,7 @@
                             <li>
                                 @foreach ($shops as $shop)
                                     @if ($shop->products->count() > 0)
-                                        <a href="/shop/{{$shop->id}}/products?s={{$shop->name}}">{{$shop->name}} <span>({{$shop->products->count()}})</span></a>
+                                        <a href="{{ URL::to('/shop/'. $shop->id. '/products?s='.$shop->name) }}">{{$shop->name}} <span>({{$shop->products->count()}})</span></a>
                                     @endif
                                 @endforeach
                             </li>

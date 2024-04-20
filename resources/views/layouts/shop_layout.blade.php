@@ -11,7 +11,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Digi-realm Ecommerce</title>
+    <title>Niger market</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -398,15 +398,15 @@
                                          and speed converge. Shop with confidence, knowing that your transactions are seamless and your deliveries are swift.
                                     </p>
                                 </div>
-                                <div class="widgets-essential_stuff">
+                                {{-- <div class="widgets-essential_stuff">
                                     <ul>
                                         <li class="uren-address"><span>Address:</span> Minna, Niger state, Nigeria.</li>
                                         <li class="uren-phone"><span>Call
-                                        Us:</span> <a href="tel://+234 703 699 8003">+234 703 699 8003</a>
+                                        Us:</span> <a href="tel://+2348171749191">+234 817 174 9191</a>
                                         </li>
                                         <li class="uren-email"><span>Email:</span> <a href="mailto://info@yourdomain.com">contact@ajirinibi.com.ng</a></li>
                                     </ul>
-                                </div>
+                                </div> --}}
                                 <div class="uren-social_link">
                                     <ul>
                                         <li class="facebook">
@@ -437,7 +437,7 @@
                                         </div>
                                         <div class="footer-widgets">
                                             <ul>
-                                                <li><a href="javascript:void(0)">About Us</a></li>
+                                                {{-- <li><a href="javascript:void(0)">About Us</a></li> --}}
                                                 <li><a href="javascript:void(0)">Delivery Information</a></li>
                                                 <li><a href="javascript:void(0)">Privacy Policy</a></li>
                                                 <li><a href="javascript:void(0)">Terms & Conditions</a></li>
@@ -450,8 +450,9 @@
                                         </div>
                                         <div class="footer-widgets">
                                             <ul>
-                                                <li><a href="javascript:void(0)">Contact Us</a></li>
+                                                <li><a href="{{ URL::to('contact') }}">Contact Us</a></li>
                                                 <li><a href="javascript:void(0)">Returns</a></li>
+                                                <li><a href="{{ URL::to('become-seller') }}">Become a seller</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -479,7 +480,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
                                 <div class="copyright">
-                                    <span><a href="templateshub.net">Templateshub</a></span>
+                                    <span><a href="https://digirealm.com.ng/">Powered by Digi-Realm</a></span>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
