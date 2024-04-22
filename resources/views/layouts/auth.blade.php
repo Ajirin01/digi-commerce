@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Phase2 Admin Authentication System</title>
+    <title>Cart Niger Login</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Font Awesome -->
@@ -47,9 +47,7 @@
     />
   </head>
   <body class="hold-transition login-page"
-  style="background-image: url({{asset('site/assets/img/banner/admin_login_bg.jpg')}});
-  background-position: center; background-repeat: no-repeat; background-size: cover
-  "
+  style="background-color: rgb(40, 23, 23)"
   >
           @yield('content')
           <!-- /.content -->

@@ -38,14 +38,22 @@ class DashboardController extends Controller
         $users = User::where('role', 'user')->get();
         $sellers = Seller::all();
 
-        $pending_earnings = Earning::where('seller_id', Auth::user()->seller->id)->where('paid', false)->sum('amount');
-        $paid_earnings = Earning::where('seller_id', Auth::user()->seller->id)->where('paid', true)->sum('amount');
+        if (Auth::check() && Auth::user()->seller) {
+            $pending_earnings = Earning::where('seller_id', Auth::user()->seller->id)->where('paid', false)->sum('amount');
+            $paid_earnings = Earning::where('seller_id', Auth::user()->seller->id)->where('paid', true)->sum('amount');
+            $sales_seller = Product::where('shop_id', Auth::user()->seller->shop->id)->sum('sold');
+
+        }else{
+            $pending_earnings = 0;
+            $paid_earnings = 0;
+            $sales_seller = 0;
+        }
 
         
         // sales by role
         $sales = Order::where('status', 'completed')->get();
         // $sales_seller = Product::where('shop_id', Auth::user()->seller->shop->id)->orderBy('id', 'desc')->get();
-        $sales_seller = Product::where('shop_id', Auth::user()->seller->shop->id)->sum('sold');
+        // $sales_seller = Product::where('shop_id', Auth::user()->seller->shop->id)->sum('sold');
 
         // $sales = Sale::where('sale_type', 'wholesale')->where('status', 'confirmed')->get();
         // return response()->json($sales_seller);
