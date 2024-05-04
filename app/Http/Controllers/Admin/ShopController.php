@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Seller;
 use App\Models\User;
-use App\Models\shop;
+use App\Models\Shop;
 use Validator;
 use Session;
 

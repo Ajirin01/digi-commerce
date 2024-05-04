@@ -24,7 +24,11 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">All Products</h3>
-                <a style="float: right" href="{{route('products.create')}}"><h3 class="card-title">Add Product</h3></a>
+                @if (Auth::user()->role === 'admin')
+                  <a style="float: right" href="{{route('product.create.options')}}"><h3 class="card-title">Add Product</h3></a>
+                @else
+                  <a style="float: right" href="{{route('products.create')}}"><h3 class="card-title">Add Product</h3></a>
+                @endif
               </div>
               <!-- /.card-header -->
               <div class="card-body">
