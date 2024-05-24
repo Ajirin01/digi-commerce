@@ -336,16 +336,18 @@
                                 <li class="menu-item-has-children active"><a href="javascript:void(0)"><span
                                         class="mm-text">Account</span></a>
                                     <ul class="sub-menu">
-                                        <li>
-                                            <a href="my-account.html">
-                                                <span class="mm-text">My Account</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ URL::to('login') }}">
-                                                <span class="mm-text">Login | Register</span>
-                                            </a>
-                                        </li>
+                                        <li><a href="{{ URL::to('account') }}">My Account<i class="fa fa-chevron-down"></i></a>
+                                        <ul class="ht-dropdown ht-my_account">
+                                            @auth
+                                                {{-- <li><a href="{{ URL::to('account') }}"><span class="fa fa-user"></span> <span>My Account</span><i class="fa fa-chevron-down"></i></a> --}}
+
+                                                <li class="active" ng-click="logout()"><a href="logout">logout</a></li>
+                                            @endauth
+                                            @guest
+                                                <li class="active"><a href="{{ URL::to('login') }}">Login</a></li>
+                                            @endguest
+                                        </ul>
+                                        
                                     </ul>
                                 </li>
                             </ul>

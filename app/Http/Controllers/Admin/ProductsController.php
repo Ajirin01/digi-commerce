@@ -37,7 +37,7 @@ class ProductsController extends Controller
         if(Auth::user()->role == 'seller'){
             $shops = Shop::where('id', Auth::user()->seller->shop->id)->get();
         }else if(Auth::user()->role == 'admin'){
-            $shops = Shop::all()->get();
+            $shops = Shop::all();
         }
 
         return view('Admin.Products.create_option', ['shops'=> $shops]);
