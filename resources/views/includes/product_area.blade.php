@@ -31,8 +31,8 @@
                         <div class="single-product">
                             <div class="product-img">
                                 <a href="{{url('product')}}/{{$product->id}}">
-                                    <img class="primary-img" src="{{optional(json_decode($product->photos))[0]}}" alt="Product Image">
-                                    <img class="secondary-img" src="{{optional(json_decode($product->photos))[1]}}" alt="Product Image">
+                                    <img class="primary-img" src="{{optional(json_decode($product->photos))[0]}}" alt="{{ $product->name }}">
+                                    <img class="secondary-img" src="{{optional(json_decode($product->photos))[1]}}" alt="{{ $product->name }}">
                                 </a>
                                 @if ($product->sale_type == "new_arrival")
                                     <div class="sticker">
@@ -89,8 +89,8 @@
                     <div class="single-product">
                         <div class="product-img">
                             <a href="product/{{$product->id}}">
-                                <img class="primary-img" src="{{optional(json_decode($product->photos))[0]}}" alt="Product Image">
-                                <img class="secondary-img" src="{{optional(json_decode($product->photos))[1]}}" alt="Product Image">
+                                <img class="primary-img" src="{{optional(json_decode($product->photos))[0]}}" alt="{{ $product->name }}">
+                                <img class="secondary-img" src="{{optional(json_decode($product->photos))[1]}}" alt="{{ $product->name }}">
                             </a>
                         </div>
                         <div class="product-content">
