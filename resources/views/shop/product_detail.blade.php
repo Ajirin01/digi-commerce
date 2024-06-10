@@ -29,7 +29,7 @@
                             "swipe": false,
                             "asNavFor": ".sp-img_slider-nav"
                             }'>
-                                @foreach ((json_decode($product->photos)) as $photo)
+                                @foreach (optional((json_decode($product->photos))) as $photo)
                                     <div class="single-slide red zoom">
                                         <img src="{{$photo}}" alt="Product Image">
                                     </div>
@@ -48,7 +48,7 @@
                                         {"breakpoint":768, "settings": {"slidesToShow": 3}},
                                         {"breakpoint":575, "settings": {"slidesToShow": 2}}
                                     ]'>
-                                @foreach ((json_decode($product->photos)) as $photo)
+                                @foreach (optional((json_decode($product->photos))) as $photo)
                                     <div class="single-slide red">
                                         <img src="{{$photo}}" alt="Product Thumnail">
                                     </div>
@@ -296,8 +296,8 @@
                                     <div class="single-product">
                                         <div class="product-img">
                                             <a href="/product/{{$product->id}}">
-                                                <img class="primary-img" src="{{(json_decode($product->photos))[0]}}" alt="Product Image">
-                                                <img class="secondary-img" src="{{(json_decode($product->photos))[1]}}" alt="Product Image">
+                                                <img class="primary-img" src="{{optional((json_decode($product->photos)))[0]}}" alt="Product Image">
+                                                <img class="secondary-img" src="{{optional((json_decode($product->photos)))[1]}}" alt="Product Image">
                                             </a>
                                             @if ($product->sale_type == "new_arrival")
                                                 <div class="sticker">

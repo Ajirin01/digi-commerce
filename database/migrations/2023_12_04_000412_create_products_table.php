@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('price');
             $table->integer('quantity');
             $table->integer('sold')->default(0);
-            $table->enum('status', ['active', 'inactive'])->default('active'); // Adding the 'status' column
+            $table->enum('status', ['active', 'inactive', 'pending'])->default('active'); // Adding the 'status' column
             $table->enum('sale_type', ['featured', 'hot_sale', 'new_arrival', 'normal'])->default('normal'); // Adding the 'sale_type' column
             $table->json('variations')->nullable();
             $table->json('photos')->nullable();
