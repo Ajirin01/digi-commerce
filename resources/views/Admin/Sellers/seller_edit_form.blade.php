@@ -37,20 +37,19 @@
             <!-- /. tools -->
           </div>
           <!-- /.card-header -->
-          
           <div class="card-body pad">
-            <form action="{{ route('shops.update', $shop->id)}}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('shops.update', $seller->shop->id)}}" method="post" enctype="multipart/form-data">
               @csrf
               @method("PATCH")
               <div class="mb-3">
                   <div class="form-group">
                       <label>Shop Bank Name</label>
-                      <input type="text" class="form-control" name="bank_name" value="{{$shop->bank_name}}">
+                      <input type="text" class="form-control" name="bank_name" value="{{$seller->bank_name}}">
                   </div>
 
                   <div class="form-group">
                     <label>Shop Account Number</label>
-                    <input type="tel" class="form-control" name="account_number" value="{{$shop->account_number}}">
+                    <input type="tel" class="form-control" name="account_number" value="{{$seller->account_number}}">
                 </div>
               </div>
               <!-- <div class="mb-3"> -->
