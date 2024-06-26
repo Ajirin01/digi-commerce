@@ -23,7 +23,7 @@
                             <div class="inner-slide">
                                 <div class="single-product">
                                     <a href="javascript:void(0)">
-                                        <img src="{{$brand->photo}}" width="174px" height="106px" alt="Uren's Brand Image">
+                                        <img src="{{$brand->photo}}" width="174px" height="106px" alt="{{$brand->name}}">
                                     </a>
                                 </div>
                             </div>
